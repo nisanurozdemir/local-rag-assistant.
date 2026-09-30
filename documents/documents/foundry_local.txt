@@ -1,0 +1,21 @@
+Foundry Local Nedir?
+
+Foundry Local, yapay zeka modellerini herhangi bir buluta bağlanmadan doğrudan
+kullanıcının kendi cihazında (bilgisayar, dizüstü, hatta telefon) çalıştırmaya
+yarayan hafif bir çalışma zamanı (runtime) ve SDK'dır. Windows, macOS ve
+Linux üzerinde çalışır.
+
+Foundry Local'ın temel özellikleri şunlardır: model kataloğundan istediğiniz
+modeli otomatik olarak indirip önbelleğe alır, cihazınızdaki donanıma göre
+(CPU, GPU veya NPU) en uygun hızlandırmayı otomatik seçer ve OpenAI ile
+uyumlu bir API sunar. Bu sayede geliştiriciler mevcut OpenAI istemci
+kodlarını neredeyse değiştirmeden yerel modellerle kullanabilir.
+
+En önemli avantajı gizliliktir: veriler cihazdan hiç çıkmaz, internet
+bağlantısı olmadan da çalışabilir. Bu da onu hassas verilerle çalışan
+uygulamalar veya offline ortamlar için ideal kılar.
+
+macOS kullanıcıları Foundry Local'ı Homebrew üzerinden kurabilir:
+"brew tap microsoft/foundrylocal" ve "brew install foundrylocal" komutları
+ile CLI aracı kurulur. Python geliştiricileri ise "pip install
+foundry-local-sdk" komutuyla SDK'yı projelerine ekleyebilir.
