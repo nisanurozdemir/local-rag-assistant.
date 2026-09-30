@@ -1,0 +1,27 @@
+Embedding (Gömme Vektörü) Nedir?
+
+Embedding, bir metni (kelime, cümle veya paragraf) sabit uzunlukta bir
+sayı dizisine (vektöre) dönüştürme işlemidir. Bu vektörler, metnin
+anlamsal içeriğini sayısal uzayda temsil eder.
+
+Embedding'in temel fikri şudur: anlamca birbirine yakın metinler,
+vektör uzayında da birbirine yakın konumlanır. Örneğin "köpek" ve
+"kedi" kelimelerinin embedding vektörleri, "köpek" ve "bilgisayar"
+kelimelerinin vektörlerinden birbirine daha yakın olur, çünkü ilk
+ikisi anlamsal olarak daha benzerdir (ikisi de evcil hayvan).
+
+Bu vektörler arasındaki benzerlik genellikle kosinüs benzerliği
+(cosine similarity) ile ölçülür. Kosinüs benzerliği -1 ile 1 arasında
+bir değer döndürür; 1'e yakın değerler yüksek benzerlik, 0'a yakın
+değerler ilgisizlik, negatif değerler ise zıtlık anlamına gelir.
+
+RAG sistemlerinde embedding'ler iki yerde kullanılır: önce tüm
+dokümanlar parçalara ayrılıp embedding'lenir ve bir veritabanında
+saklanır; sonra kullanıcının sorusu da aynı embedding modeliyle
+vektöre çevrilir. Bu iki vektör kümesi arasındaki benzerlik
+hesaplanarak, soruya en alakalı doküman parçaları bulunur.
+
+Farklı embedding modelleri farklı boyutlarda vektörler üretir
+(örneğin 384, 768 veya 1024 boyutlu). Aynı modelin ürettiği
+vektörler karşılaştırılabilir, ama farklı modellerin vektörleri
+genellikle birbiriyle doğrudan kıyaslanamaz.
