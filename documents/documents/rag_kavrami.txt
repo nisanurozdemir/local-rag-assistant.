@@ -1,0 +1,22 @@
+RAG (Retrieval-Augmented Generation) Kavramı
+
+RAG, bir yapay zeka tasarım desenidir ve üç adımdan oluşur: Retrieve
+(getir), Augment (zenginleştir) ve Generate (üret).
+
+İlk adımda, kullanıcının sorusuna en yakın anlamlı içerikler bir doküman
+koleksiyonundan aranıp bulunur. Bu arama genellikle embedding tabanlı
+anlamsal (semantic) benzerlik ile yapılır: hem dokümanlar hem de soru
+sayısal vektörlere dönüştürülür, ardından bu vektörler arasındaki
+kosinüs benzerliği hesaplanarak en alakalı parçalar seçilir.
+
+İkinci adımda, bulunan bu ilgili metinler kullanıcının sorusuyla birlikte
+büyük dil modeline (LLM) verilecek olan istemin (prompt) içine eklenir.
+Bu sayede model, sadece kendi eğitim verisine değil, size özel ve güncel
+bilgiye dayanarak cevap üretebilir.
+
+Üçüncü adımda ise model, bu zenginleştirilmiş bağlamı kullanarak bir
+cevap üretir. RAG'in en büyük faydası, modelin uydurma (halüsinasyon)
+yapma olasılığını azaltması ve cevapların kaynağa dayalı, doğrulanabilir
+olmasıdır. Sistem mesajında modele "sadece verilen bağlamı kullan, emin
+değilsen bilmediğini söyle" gibi talimatlar vermek, bu doğruluğu daha da
+artırır.
