@@ -1,0 +1,15 @@
+# Sanal ortam
+.venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Veritabani (yeniden olusturulabilir, repo'ya girmesin)
+knowledge_base.db
+
+# Test ciktisi (her calistirmada degisir)
+test_raporu.md
+
+# macOS
+.DS_Store
