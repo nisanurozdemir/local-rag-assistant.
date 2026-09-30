@@ -1,0 +1,19 @@
+SQLite ile Yerel Veri Saklama
+
+SQLite, sunucu gerektirmeyen (serverless), tek bir dosyadan oluşan,
+hafif bir SQL veritabanı motorudur. Dünyada en yaygın kullanılan
+veritabanı motoru olarak kabul edilir çünkü kurulumu son derece
+basittir: ayrı bir sunucu süreci çalıştırmanıza gerek yoktur, tüm
+veritabanı diskteki tek bir ".db" dosyasında saklanır.
+
+Python'da sqlite3 modülü standart kütüphaneyle birlikte gelir, bu
+yüzden ekstra bir paket kurmaya gerek kalmadan veritabanı
+oluşturabilir, tablo tanımlayabilir, satır ekleyebilir ve sorgu
+çalıştırabilirsiniz.
+
+Yerel bir RAG (Retrieval-Augmented Generation) uygulamasında SQLite,
+doküman parçalarını (chunk) ve bu parçalara karşılık gelen embedding
+vektörlerini saklamak için idealdir. Küçük ölçekli koleksiyonlarda
+(örneğin birkaç yüz parça), tüm embedding'leri hafızaya okuyup kosinüs
+benzerliği hesaplamak yeterince hızlıdır; çok büyük koleksiyonlarda ise
+özel vektör veritabanları tercih edilir.
